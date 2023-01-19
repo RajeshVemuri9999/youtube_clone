@@ -3,6 +3,7 @@ import Leftbar from "../leftBar/left_bar";
 import { appContext } from "../../App";
 import './main_comp.css'
 import Article from "../Article/Article";
+import { Outlet } from "react-router-dom";
 
 const Maincomp = () => {
   return (
@@ -13,7 +14,8 @@ const Maincomp = () => {
         </appContext.Consumer>
       </div>
       <div className='col-9' >
-        <Article/>
+        {/* */}
+        <Outlet/>
       </div>
     </div>
   );

@@ -9,21 +9,41 @@
 .article .map_data{
     padding: 10px;
 }
-.article .map_data img{
-    height: 20rem;
-    width: 17rem;
+.article .map_data img {
+    height: 250px;
+    width: 190px;
+    cursor: pointer;
+}
+.article .anime_title{
+    font-family: sans-serif;
+    font-size: 13px;
+
 }
 .article::-webkit-scrollbar{
     background: rgb(190, 190, 190);
     height: 5px;
     }
 .article::-webkit-scrollbar-thumb{
-background:rgb(0, 99, 86);
+background:rgb(206, 141, 88);
 height: 20px;
 }
-
-.latest_anime img {
-    width: 89vw;
-    height: 80vh;
+.latest_anime{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.latest_anime .anime-1 img,.anime-2 img,.anime-3 img,.anime-4 img {
+    width: 20vw;
+    height: 60vh;
+    padding: 15px;
     object-fit: cover;
+    cursor: pointer;
+    transition: transform .3s ease-in;
+}
+
+
+.latest_anime .anime-1:hover img ,.anime-2:hover img,.anime-3:hover img,.anime-4:hover img {
+    transform: scale(0.9);
+    filter: drop-shadow(20px 20px 10px grey);
 }

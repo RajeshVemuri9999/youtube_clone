@@ -4,8 +4,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Maincomp from "./component/maincomp/maincomp";
 import "./App.css";
 import { ProSidebarProvider } from "react-pro-sidebar";
+import Anim1data from './component/anime_data/anime_1data'
 import Article from "./component/Article/Article";
-
+import Anime2data from "./component/anime_data/anime_2data";
+import Anime3data from "./component/anime_data/anime_3data";
+import Anime4data from "./component/anime_data/anime_data4";
 
 export const appContext = React.createContext();
 
@@ -24,7 +27,10 @@ const App = () => {
           <Router>
             <Layout>
               <Routes>
-                <Route path="/" element={<Maincomp />} />
+                <Route path="/" element={<Maincomp />}>
+                 <Route path="/" element={ <Article/>}/>
+                  <Route path="/anime/:id" element={<Anim1data/>}/>
+                </Route>
               </Routes>
             </Layout>
           </Router>
