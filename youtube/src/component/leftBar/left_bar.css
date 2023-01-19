@@ -1,0 +1,25 @@
+
+.menu-items {
+    display: flex;
+    align-items: center;
+    float: left;
+}
+
+.menu-items img{
+    padding-right: 25px;
+}
+
+.css-dip3t8 {
+
+    height: 100vh !important;
+    background-color: white !important;
+}
+.css-1wvake5.ps-collapsed {
+    width: 65px !important;
+    min-width: 65px !important;
+}
+.css-1wvake5 {
+   
+    width: 190px !important;
+    min-width: 190px !important;
+}

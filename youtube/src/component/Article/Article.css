@@ -1,0 +1,29 @@
+.row{
+    display: flex;
+}
+.article{
+ display: flex;
+ overflow-x: scroll;
+ width: 96vw;
+}
+.article .map_data{
+    padding: 10px;
+}
+.article .map_data img{
+    height: 20rem;
+    width: 17rem;
+}
+.article::-webkit-scrollbar{
+    background: rgb(190, 190, 190);
+    height: 5px;
+    }
+.article::-webkit-scrollbar-thumb{
+background:rgb(0, 99, 86);
+height: 20px;
+}
+
+.latest_anime img {
+    width: 89vw;
+    height: 80vh;
+    object-fit: cover;
+}
