@@ -6,10 +6,11 @@ import Latest_anime2 from '../../assets/images/latest_anime-2.jpg'
 import Latest_anime3 from '../../assets/images/latest_anime-3.jpg'
 import Latest_anime4 from '../../assets/images/latest_anime-4.jpg'
 import { Link } from 'react-router-dom'
-import Animemapdata from '../anime_data/anime_map_data'
 
 const Article = () => {
     const[state,setState]=React.useState({});
+    const[episodes,setEpisodes]=React.useState(false);
+    const[prevId,setPrevId]=React.useState('')
     const getNew = async () => {
         const response=await axios.get(`https://kitsu.io/api/edge/anime`);
         if(response?.status==200)
@@ -20,7 +21,16 @@ const Article = () => {
         getNew();
       }, []);
       
-      
+      const episodesHandler=(item)=>{
+        setPrevId(item.id)
+        if(episodes==true){
+          setEpisodes(false);}
+          else{
+            setEpisodes(true)
+          }
+        }
+        
+        
       
 return (
   <div>  
@@ -29,18 +39,23 @@ return (
         state.data&&state.data.map((item,index)=>{
           
           console.log(item);
+          console.log(item.id);
           return(
             <div key={index} className='map_data'>
-                  <img  
+                  <img  onClick={()=>episodesHandler(item)}
                     src={item.attributes.posterImage?.medium}
                     alt='logo'/>
                     <div className='anime_title'>
                     {item.attributes.canonicalTitle}
-                   
                     </div>
-            
-                    {item.attributes.description}
-                    {/* <Animemapdata desc= {item.attributes.description}/> */}
+                    <div className='description'>
+                      <h6>Description:</h6>
+                      <p>
+                    {
+                    episodes?<div>{item.attributes.description}</div>:''
+                    }
+                      </p>
+                    </div>
                     </div>
                 )
               })  

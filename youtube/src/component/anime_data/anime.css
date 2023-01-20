@@ -1,0 +1,15 @@
+.nested_anime,.nested_anime_row2,.nested_anime_row3 {
+    display: flex;
+    width: 90vw;
+    justify-content: space-around;
+    padding: 24px;
+}
+.nested_anime img,.nested_anime_row2 img,.nested_anime_row3 img {
+    height: 350px;
+    width: 300px;
+    transition: transform .3s ease-in;
+}
+.nested_anime img:hover,.nested_anime_row2 img:hover,.nested_anime_row3 img:hover{
+    transform: scale(0.9);
+    filter: drop-shadow(20px 20px 10px grey);
+} 
